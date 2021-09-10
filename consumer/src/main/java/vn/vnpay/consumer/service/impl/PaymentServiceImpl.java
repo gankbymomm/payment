@@ -46,7 +46,7 @@ public class PaymentServiceImpl implements PaymentService {
         logger.info("Insert to database done !!!");
 
         // send data and receive response to partner
-        ResponseEntity<Object> responsePartner = PostRequestUtils.postRequest(paymentDTO, SystemConstant.URL_API_VNPAY);
+        ResponseEntity<Object> responsePartner = PostRequestUtils.postRequest(paymentDTO, SystemConstant.URL_VNPAY);
         logger.info("Response from URL : {} ", responsePartner);
         ResponseFromPartnerDTO response = new ResponseFromPartnerDTO();
         if (responsePartner != null) {
