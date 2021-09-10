@@ -14,8 +14,8 @@ public class PostRequestUtils {
     private static final Logger logger = LogManager.getLogger(PostRequestUtils.class);
 
     public static ResponseEntity<Object> postRequest(Object object, String url) {
-        logger.info("Data send to partner :{}", object.toString());
-        logger.info("Url partner receive data :{}", url);
+        logger.info("Data send to partner : {}", object.toString());
+        logger.info("Url partner receive data : {}", url);
         try {
             HttpHeaders headers = new HttpHeaders();
             headers.add("Accept", MediaType.APPLICATION_JSON_VALUE);
@@ -25,7 +25,7 @@ public class PostRequestUtils {
             HttpEntity<Object> requestBody = new HttpEntity<>(object, headers);
             ResponseEntity<Object> result = restTemplate.postForEntity(url, requestBody, Object.class);
             logger.info("Response from partner : {}", result);
-            logger.info("Data status :{}", result.getStatusCodeValue());
+            logger.info("Data status code : {}", result.getStatusCodeValue());
             return result;
         } catch (Exception e) {
             logger.error("Can not send data to partner : " + e);
