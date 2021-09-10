@@ -43,6 +43,7 @@ public class PaymentServiceImpl implements PaymentService {
         PaymentEntity paymentEntity = paymentConverter.toEntity(paymentDTO);
         logger.info("Data insert to database : {} ", paymentEntity.toString());
         paymentRepository.save(paymentEntity);
+        logger.info("Insert to database done !!!");
 
         // send data and receive response to partner
         ResponseEntity<Object> responsePartner = PostRequestUtils.postRequest(paymentDTO, SystemConstant.URL_API_VNPAY);
