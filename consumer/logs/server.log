@@ -1,0 +1,1958 @@
+[WARN ] 2021-09-16 01:28:25.187 [] JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) [spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) [spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) [spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.4.jar:2.5.4]
+	at vn.vnpay.consumer.ConsumerApplication.main(ConsumerApplication.java:10) [classes/:?]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_181]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	... 49 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_181]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_181]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_181]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_181]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_181]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	... 49 more
+[WARN ] 2021-09-16 01:31:33.452 [] JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) [spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) [spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) [spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) [spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.4.jar:2.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.4.jar:2.5.4]
+	at vn.vnpay.consumer.ConsumerApplication.main(ConsumerApplication.java:10) [classes/:?]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_181]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	... 49 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_181]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_181]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_181]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_181]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_181]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	... 49 more
+[WARN ] 2021-09-16 01:34:12.921 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:34:12.921 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:34:18.005 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:34:18.005 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:34:23.092 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:34:23.092 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:34:28.192 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:34:28.192 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:34:33.252 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:34:33.252 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:34:38.322 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:34:38.322 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:34:43.369 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:34:43.369 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:34:48.456 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:34:48.456 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:34:53.539 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:34:53.539 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:34:58.595 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:34:58.595 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:03.652 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:03.652 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:08.720 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:08.720 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:13.770 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:13.770 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:18.820 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:18.820 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:23.888 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:23.888 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:28.950 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:28.950 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:34.011 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:34.011 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:39.096 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:39.096 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:44.190 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:44.190 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:49.271 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:49.271 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:54.351 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:54.351 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:35:59.405 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:35:59.405 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:36:04.470 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:36:04.470 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:36:09.539 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:36:09.539 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:36:14.621 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:36:14.621 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:36:19.675 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:36:19.675 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:36:24.712 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:36:24.712 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:36:29.793 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:36:29.793 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:36:34.834 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:36:34.834 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:36:39.915 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:36:39.915 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:36:44.971 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:36:44.971 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:36:50.155 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:36:50.155 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:36:55.223 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:36:55.223 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:00.326 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:00.326 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:05.376 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:05.376 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:10.411 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:10.411 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:15.497 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:15.497 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:20.530 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:20.530 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:25.621 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:25.621 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:30.667 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:30.667 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:35.722 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:35.722 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:40.823 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:40.823 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:45.912 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:45.912 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:50.948 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:50.948 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:37:56.027 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:37:56.027 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:01.082 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:01.082 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:06.116 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:06.116 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:11.201 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:11.201 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:16.284 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:16.284 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:21.355 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:21.355 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:26.414 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:26.414 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:31.500 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:31.500 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:36.552 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:36.552 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:41.621 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:41.621 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:46.671 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:46.671 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:51.730 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:51.730 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:38:56.768 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:38:56.768 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:01.801 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:01.801 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:06.856 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:06.856 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:11.918 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:11.918 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:16.970 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:16.970 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:22.018 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:22.018 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:27.104 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:27.104 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:32.192 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:32.192 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:37.228 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:37.228 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:42.295 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:42.295 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:47.421 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:47.421 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:52.469 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:52.469 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:39:57.520 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:39:57.520 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:02.568 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:02.568 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:07.624 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:07.624 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:12.702 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:12.702 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:17.744 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:17.744 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:22.807 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:22.807 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:27.870 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:27.870 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:32.950 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:32.950 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:38.015 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:38.015 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:43.112 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:43.112 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:48.184 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:48.184 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:53.221 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:53.221 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:40:58.271 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:40:58.271 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:03.352 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:03.352 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:08.456 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:08.456 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:13.515 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:13.515 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:18.586 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:18.586 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:23.631 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:23.631 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:28.680 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:28.680 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:33.711 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:33.711 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:38.786 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:38.786 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:43.887 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:43.887 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:49.001 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:49.001 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:54.056 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:54.056 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:41:59.138 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:41:59.138 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:04.215 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:04.215 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:09.298 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:09.298 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:14.355 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:14.355 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:19.399 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:19.399 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:24.466 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:24.466 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:29.544 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:29.544 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:34.617 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:34.617 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:39.723 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:39.723 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:44.804 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:44.804 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:49.862 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:49.862 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:54.910 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:54.910 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:42:59.943 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:42:59.943 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:43:05.060 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:43:05.060 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:43:10.103 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:43:10.103 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:43:15.172 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:43:15.172 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:43:20.255 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:43:20.255 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:43:25.339 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:43:25.339 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:43:30.371 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:43:30.371 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:43:35.421 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:43:35.421 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:43:40.522 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:43:40.522 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:43:45.564 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:43:45.564 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:43:50.683 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:43:50.683 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:43:55.764 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:43:55.764 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:00.847 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:00.847 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:05.942 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:05.942 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:11.025 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:11.025 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:16.113 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:16.113 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:21.232 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:21.232 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:26.309 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:26.309 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:31.365 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:31.365 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:36.423 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:36.423 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:41.502 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:41.502 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:46.602 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:46.602 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:51.687 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:51.687 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:44:56.752 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:44:56.752 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:01.821 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:01.821 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:06.891 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:06.891 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:11.988 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:11.988 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:17.043 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:17.043 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:22.092 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:22.092 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:27.126 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:27.126 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:32.215 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:32.215 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:37.280 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:37.280 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:42.367 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:42.367 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:47.397 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:47.397 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:52.437 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:52.437 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:45:57.521 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:45:57.521 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:02.584 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:02.584 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:07.652 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:07.652 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:12.739 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:12.739 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:17.823 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:17.823 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:22.871 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:22.871 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:27.959 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:27.959 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:33.025 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:33.025 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:38.096 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:38.096 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:43.215 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:43.215 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:48.310 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:48.310 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:53.348 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:53.348 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:46:58.439 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:46:58.439 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:03.495 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:03.495 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:08.601 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:08.601 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:13.671 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:13.671 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:18.753 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:18.753 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:23.832 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:23.832 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:28.889 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:28.889 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:33.941 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:33.941 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:38.989 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:38.989 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:44.046 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:44.046 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:49.111 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:49.111 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:54.184 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:54.184 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:47:59.217 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:47:59.217 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:48:04.270 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:48:04.270 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:48:09.344 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:48:09.344 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:48:14.416 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:48:14.416 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:48:19.524 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:48:19.524 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:48:24.593 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:48:24.593 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:48:29.677 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:48:29.677 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:48:34.742 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:48:34.742 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:48:39.833 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:48:39.833 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:48:44.900 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:48:44.900 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:48:49.938 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:48:49.938 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:48:54.994 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:48:54.994 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:00.057 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:00.057 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:05.153 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:05.153 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:10.221 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:10.221 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:15.320 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:15.320 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:20.377 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:20.377 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:25.495 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:25.495 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:30.544 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:30.544 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:35.632 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:35.632 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:40.697 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:40.697 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:45.833 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:45.833 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:50.887 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:50.887 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:49:55.967 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:49:55.967 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:01.047 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:01.047 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:06.127 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:06.127 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:11.182 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:11.182 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:16.255 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:16.255 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:21.322 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:21.322 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:26.424 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:26.424 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:31.522 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:31.522 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:36.571 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:36.571 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:41.616 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:41.616 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:46.687 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:46.687 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:51.784 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:51.784 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:50:56.834 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:50:56.834 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:01.926 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:01.926 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:06.977 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:06.977 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:12.011 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:12.011 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:17.107 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:17.107 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:22.195 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:22.195 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:27.297 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:27.297 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:32.392 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:32.392 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:37.442 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:37.442 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:42.531 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:42.531 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:47.581 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:47.581 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:52.645 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:52.645 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:51:57.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:51:57.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:02.806 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:02.806 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:07.847 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:07.847 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:12.939 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:12.939 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:18.010 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:18.010 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:23.097 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:23.097 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:28.146 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:28.146 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:33.233 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:33.233 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:38.330 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:38.330 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:43.371 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:43.371 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:48.456 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:48.456 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:53.506 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:53.506 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:52:58.586 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:52:58.586 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:03.655 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:03.655 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:08.715 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:08.715 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:13.772 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:13.772 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:18.837 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:18.837 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:23.888 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:23.888 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:28.939 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:28.939 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:34.003 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:34.003 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:39.089 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:39.089 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:44.141 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:44.141 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:49.228 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:49.228 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:54.314 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:54.314 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:53:59.399 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:53:59.399 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:54:04.467 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:54:04.467 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:54:09.569 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:54:09.569 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:54:14.621 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:54:14.621 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:54:19.704 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:54:19.704 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:54:24.770 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:54:24.770 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:54:29.845 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:54:29.845 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:54:34.903 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:54:34.903 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:54:40.028 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:54:40.028 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:54:45.158 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:54:45.158 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:54:50.320 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:54:50.320 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:54:55.463 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:54:55.463 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:00.565 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:00.565 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:05.685 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:05.685 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:10.765 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:10.765 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:15.874 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:15.874 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:21.019 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:21.019 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:26.105 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:26.105 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:31.225 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:31.225 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:36.354 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:36.354 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:41.465 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:41.465 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:46.554 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:46.554 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:51.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:51.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:55:56.785 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:55:56.785 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:01.884 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:01.884 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:07.004 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:07.004 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:12.108 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:12.108 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:17.235 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:17.235 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:22.295 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:22.295 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:27.376 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:27.376 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:32.484 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:32.484 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:37.584 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:37.584 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:42.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:42.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:47.804 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:47.804 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:52.923 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:52.923 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:56:58.024 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:56:58.024 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:03.144 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:03.144 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:08.263 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:08.263 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:13.404 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:13.404 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:18.539 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:18.539 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:23.676 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:23.676 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:28.775 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:28.775 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:33.869 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:33.869 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:38.988 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:38.988 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:44.136 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:44.136 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:49.264 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:49.264 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:54.324 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:54.324 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:57:59.443 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:57:59.443 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:58:04.524 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:58:04.524 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:58:09.644 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:58:09.644 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:58:14.764 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:58:14.764 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:58:19.924 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:58:19.924 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:58:25.004 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:58:25.004 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:58:30.105 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:58:30.105 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:58:35.228 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:58:35.228 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:58:40.344 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:58:40.344 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:58:45.443 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:58:45.443 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:58:50.524 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:58:50.524 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:58:55.604 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:58:55.604 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:00.784 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:00.784 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:05.904 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:05.904 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:11.044 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:11.044 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:16.155 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:16.155 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:21.255 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:21.255 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:26.363 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:26.363 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:31.484 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:31.484 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:36.564 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:36.564 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:41.664 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:41.664 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:46.764 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:46.764 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:51.924 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:51.924 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 01:59:57.003 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 01:59:57.004 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:02.124 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:02.124 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:07.219 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:07.219 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:12.317 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:12.317 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:17.403 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:17.403 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:22.484 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:22.484 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:27.564 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:27.564 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:32.664 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:32.664 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:37.773 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:37.773 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:42.845 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:42.845 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:47.984 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:47.984 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:53.104 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:53.104 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:00:58.206 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:00:58.206 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:03.334 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:03.334 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:08.445 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:08.445 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:13.565 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:13.565 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:18.665 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:18.665 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:23.745 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:23.745 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:28.865 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:28.865 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:33.965 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:33.965 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:39.125 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:39.125 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:44.235 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:44.235 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:49.325 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:49.325 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:54.454 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:54.454 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:01:59.565 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:01:59.565 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:02:04.685 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:02:04.685 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:02:09.773 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:02:09.773 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:02:14.864 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:02:14.864 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:02:19.985 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:02:19.985 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:02:25.105 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:02:25.105 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:02:30.205 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:02:30.205 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:02:35.305 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:02:35.305 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:02:40.365 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:02:40.365 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:02:45.445 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:02:45.445 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:02:50.554 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:02:50.554 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:02:55.658 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:02:55.658 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:00.786 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:00.786 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:05.885 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:05.885 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:10.985 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:10.985 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:16.085 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:16.085 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:21.205 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:21.205 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:26.325 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:26.325 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:31.465 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:31.465 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:36.605 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:36.605 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:41.725 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:41.725 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:46.865 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:46.865 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:51.945 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:51.945 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:03:57.025 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:03:57.025 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:02.145 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:02.145 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:07.280 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:07.280 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:12.385 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:12.385 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:17.485 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:17.485 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:22.574 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:22.574 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:27.665 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:27.665 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:32.785 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:32.785 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:37.861 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:37.861 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:43.025 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:43.025 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:48.145 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:48.145 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:53.285 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:53.285 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:04:58.365 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:04:58.365 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:03.505 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:03.505 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:08.594 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:08.594 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:13.745 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:13.745 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:18.885 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:18.885 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:23.974 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:23.974 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:29.045 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:29.045 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:34.185 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:34.185 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:39.286 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:39.286 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:44.425 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:44.425 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:49.545 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:49.545 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:54.634 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:54.634 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:05:59.805 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:05:59.805 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:06:04.945 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:06:04.945 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:06:10.036 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:06:10.036 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:06:15.145 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:06:15.145 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:06:20.225 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:06:20.225 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:06:25.334 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:06:25.334 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:06:30.454 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:06:30.454 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:06:35.554 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:06:35.554 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:06:40.654 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:06:40.654 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:06:45.744 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:06:45.745 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:06:50.905 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:06:50.905 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:06:56.005 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:06:56.005 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:01.105 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:01.105 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:06.225 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:06.225 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:11.304 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:11.304 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:16.421 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:16.422 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:21.555 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:21.555 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:26.664 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:26.664 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:31.804 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:31.804 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:36.965 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:36.965 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:42.105 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:42.105 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:47.205 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:47.205 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:52.325 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:52.325 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:07:57.437 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:07:57.437 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:02.515 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:02.515 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:07.584 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:07.584 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:12.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:12.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:17.763 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:17.763 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:22.924 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:22.924 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:28.064 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:28.064 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:33.184 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:33.184 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:38.304 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:38.304 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:43.434 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:43.435 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:48.536 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:48.536 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:53.664 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:53.664 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:08:58.775 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:08:58.775 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:09:03.875 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:09:03.875 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:09:08.948 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:09:08.948 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:09:14.043 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:09:14.043 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:09:19.184 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:09:19.184 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:09:24.264 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:09:24.264 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:09:29.404 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:09:29.404 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:09:34.515 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:09:34.515 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:09:39.585 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:09:39.585 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:09:44.704 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:09:44.704 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:09:49.824 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:09:49.824 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:09:54.944 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:09:54.944 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:00.044 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:00.044 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:05.175 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:05.175 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:10.304 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:10.304 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:15.384 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:15.384 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:20.524 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:20.524 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:25.635 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:25.635 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:30.764 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:30.764 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:35.895 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:35.895 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:41.024 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:41.024 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:46.144 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:46.144 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:51.274 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:51.274 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:10:56.377 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:10:56.377 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:01.464 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:01.464 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:06.595 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:06.595 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:11.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:11.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:16.795 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:16.795 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:21.944 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:21.944 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:27.124 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:27.124 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:32.203 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:32.203 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:37.344 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:37.344 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:42.484 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:42.484 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:47.595 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:47.595 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:52.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:52.684 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[WARN ] 2021-09-16 02:11:57.764 [1601353776839FT19310RH6P347] SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+[ERROR] 2021-09-16 02:11:57.764 [1601353776839FT19310RH6P347] SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.

@@ -4,6 +4,8 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
+import org.springframework.amqp.rabbit.connection.ConnectionFactory;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
@@ -15,15 +17,14 @@ public class RabbitConfig {
 
     @Bean
     public Queue queue(){
-        return new Queue(RabbitConstant.QUEUE_DATA1);
+        return new Queue(RabbitConstant.QUEUE_DATA1, false);
     }
 
     @Bean
     public Queue queue1(){
-        return new Queue(RabbitConstant.QUEUE_DATA2);
+        return new Queue(RabbitConstant.QUEUE_DATA2, false);
     }
 
-    // receive
     @Bean
     public TopicExchange topicExchange(){
         return new TopicExchange(RabbitConstant.TOPIC_EXCHANGE1);
@@ -34,12 +35,6 @@ public class RabbitConfig {
         return BindingBuilder.bind(queue()).to(topicExchange()).with(RabbitConstant.ROUTING_KEY1);
     }
 
-    // send
-   /* @Bean
-    public TopicExchange topicExchange2(){
-        return new TopicExchange(RabbitConstant.TOPIC_EXCHANGE2);
-    }*/
-
     @Bean
     public Binding binding2(){
         return BindingBuilder.bind(queue1()).to(topicExchange()).with(RabbitConstant.ROUTING_KEY2);
@@ -48,5 +43,11 @@ public class RabbitConfig {
     @Bean
     public MessageConverter converter(){
         return new Jackson2JsonMessageConverter();
+    }
+    @Bean
+    public RabbitTemplate rabbitTemplate(final ConnectionFactory connectionFactory) {
+        final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
+        rabbitTemplate.setMessageConverter(converter());
+        return rabbitTemplate;
     }
 }

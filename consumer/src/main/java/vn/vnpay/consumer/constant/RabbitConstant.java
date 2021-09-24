@@ -9,5 +9,5 @@ public class RabbitConstant {
     public static final String TOPIC_EXCHANGE1 = "topic.exchange.send";
 
     public static final String ROUTING_KEY2 = "routing.key.send1";
-    public static final String TOPIC_EXCHANGE2 = "topic.exchange.send1";
+
 }

@@ -1,18 +1,16 @@
 package vn.vnpay.payment.entity;
 
-import lombok.Getter;
+import lombok.Data;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Getter
+@Data
 @Entity
 @Table(name = "payment")
 public class PaymentEntity extends BaseEntity {
 
     private String tokenKey;
-    @Column
     private String apiID;
     private String mobile;
     private String bankCode;
@@ -26,11 +24,8 @@ public class PaymentEntity extends BaseEntity {
     private String messageType;
     private String checkSum;
     private String orderCode;
-    @Column
     private String userName;
-    @Column
     private String realAmount;
-    @Column
     private String promotionCode;
     private String addValue;
 }

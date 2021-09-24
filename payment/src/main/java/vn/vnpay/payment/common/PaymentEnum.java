@@ -6,7 +6,11 @@ public enum PaymentEnum {
     WRONG_FORMAT_DATE("03", "Time is wrong format"),
     ERROR_AMOUNT("04", "Real amount can not greater than debit amount"),
     PROMOTION_NULL("05", "Promotion code can not null when real amount different debit amount"),
-    VALIDATE_FAILED("06", "Validate failed")
+    VALIDATE_FAILED("06", "Validate failed"),
+    TIME_OUT("07", "Transaction overtime"),
+    CHECK_SUM_FAIL("08", "Check sum not equals"),
+    INVALID_KEY("09", "Bank code not exist"),
+    TRANSACTION_ERROR("10", "URL wrong address")
     ;
 
     private String code;

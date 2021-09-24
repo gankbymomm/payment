@@ -1,12 +1,13 @@
 package vn.vnpay.consumer.entity;
 
-
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 
 @Data
+@AllArgsConstructor
 @Entity
 @Table(name = "consumer")
 public class PaymentEntity extends BaseEntity {
@@ -29,4 +30,9 @@ public class PaymentEntity extends BaseEntity {
     private String realAmount;
     private String promotionCode;
     private String addValue;
+
+
+    public PaymentEntity() {
+
+    }
 }

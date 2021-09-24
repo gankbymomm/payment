@@ -14,6 +14,6 @@ public class ResponsePaymentDTO implements Serializable {
     private String code;
     private String message;
     private String responseId;
-    private String checkSum;
-    private String addValue;
+    private boolean checkSum;
+    private Object addValue;
 }
